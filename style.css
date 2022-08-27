@@ -1,0 +1,38 @@
+.green_border {
+    border: 5px solid rgb(144, 253, 144);
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-small;
+    margin: 5px 0px;
+}
+
+.red_border {
+    border: 5px solid rgba(228, 55, 55, 0.979);
+    display: flex;
+    height: 400px;
+    margin-bottom: 2px;
+}
+
+.blue_border {
+    border: 5px solid blue;
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+    margin-bottom: 2px;
+}
+
+.purple_border {
+    border: 5px solid rgb(201, 101, 201);
+    display: flex;
+    height: 12%;
+    width: 100%;
+    margin: 2px 0px;
+}
+
+.yellow_border {
+    border: 5px solid rgb(247, 247, 4);
+    height: 85%;
+}
