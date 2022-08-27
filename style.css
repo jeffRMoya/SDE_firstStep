@@ -9,11 +9,30 @@
     margin: 5px 0px;
 }
 
+.justify_row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .red_border {
     border: 5px solid rgba(228, 55, 55, 0.979);
     display: flex;
+    justify-content: center;
     height: 400px;
     margin-bottom: 2px;
+}
+
+.form_fit {
+    font-size: x-small;
+}
+
+.form_input_margin {
+    margin: 0 0 5px 0;
+}
+
+.form_input_height {
+    line-height: 0;
+    font-size: x-small;
 }
 
 .blue_border {
@@ -30,6 +49,7 @@
     height: 12%;
     width: 100%;
     margin: 2px 0px;
+    font-size: x-small;
 }
 
 .yellow_border {

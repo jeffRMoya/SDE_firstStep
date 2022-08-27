@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template</title>
+    <title>Vacation Destinations WishList</title>
 
     <!-- Resets CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reseter.css" />
@@ -31,10 +31,65 @@
           </p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-5 col-sm-12 red_border"></div>
+      <div class="row justify_row">
+        <div class="col-md-5 col-sm-12 red_border">
+          <form class="form_fit">
+            <div class="form_input_margin">
+              <label for="destination" class="form_input_margin"
+                >Destination Name</label
+              >
+              <input
+                type="text"
+                class="form-control form_input_height"
+                id="destination"
+                name="destination"
+                aria-describedby="emailHelp"
+                placeholder="Enter the name of the destination"
+                required
+              />
+            </div>
+            <div class="form_input_margin">
+              <label for="location" class="form_input_margin">Location</label>
+              <input
+                type="text"
+                class="form-control form_input_height"
+                id="location"
+                name="location"
+                placeholder="Where is it located?"
+                required
+              />
+            </div>
+            <div class="form_input_margin">
+              <label for="photo" class="form_input_margin">Photo</label>
+              <input
+                type="text"
+                class="form-control form_input_height"
+                id="photo"
+                name="photo"
+                placeholder="Enter an image url of the place"
+              />
+            </div>
+            <div class="form_input_margin">
+              <label for="description" class="form_input_margin"
+                >Description</label
+              >
+              <textarea
+                type="text"
+                class="form-control form_input_height"
+                id="description"
+                placeholder="Where is it located?"
+                rows="3"
+              ></textarea>
+            </div>
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-sm btn-primary">
+                Add to list
+              </button>
+            </div>
+          </form>
+        </div>
         <div class="col-md-5 col-sm-12 blue_border">
-          <div class="purple_border"></div>
+          <div class="purple_border">Enter destination details</div>
           <div class="yellow_border"></div>
         </div>
       </div>
