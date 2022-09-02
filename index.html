@@ -17,12 +17,29 @@
       crossorigin="anonymous"
     />
 
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- jQuery Google CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <!-- My CSS -->
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
-    <div class="container">
-      <div class="row">
+  <body onload="startUp()">
+    <div id="top_container" class="container">
+      <div class="row justify_row">
         <div class="green_border">
           <h3>Vacation Destinations WishList</h3>
           <p>
@@ -31,28 +48,45 @@
           </p>
         </div>
       </div>
+    </div>
+    <div class="parallax-container">
+      <div id="parallax" class="parallax">
+        <img src="https://bit.ly/3QdFwRk" />
+      </div>
+    </div>
+    <div id="bottom_container" class="container">
       <div class="row justify_row">
         <div class="col-md-5 col-sm-12 red_border">
           <form class="form_fit">
             <div class="form_input_margin">
               <label for="destination" class="form_input_margin"
-                >Destination Name</label
+                >Destination Website:</label
               >
               <input
                 type="text"
-                class="form-control form_input_height"
+                style="
+                  background-color: #9ed2c6;
+                  border-radius: 0.375rem;
+                  border-bottom: 0;
+                "
+                class="form-control form_input_height input_align_color"
                 id="destination"
                 name="destination"
                 aria-describedby="emailHelp"
-                placeholder="Enter the name of the destination"
+                placeholder="Enter the website of the destination"
                 required
               />
             </div>
             <div class="form_input_margin">
-              <label for="location" class="form_input_margin">Location</label>
+              <label for="location" class="form_input_margin">Location:</label>
               <input
                 type="text"
-                class="form-control form_input_height"
+                style="
+                  background-color: #9ed2c6;
+                  border-radius: 0.375rem;
+                  border-bottom: 0;
+                "
+                class="form-control form_input_height input_align_color"
                 id="location"
                 name="location"
                 placeholder="Where is it located?"
@@ -60,10 +94,15 @@
               />
             </div>
             <div class="form_input_margin">
-              <label for="photo" class="form_input_margin">Photo</label>
+              <label for="photo" class="form_input_margin">Photo:</label>
               <input
                 type="text"
-                class="form-control form_input_height"
+                style="
+                  background-color: #9ed2c6;
+                  border-radius: 0.375rem;
+                  border-bottom: 0;
+                "
+                class="form-control form_input_height input_align_color"
                 id="photo"
                 name="photo"
                 placeholder="Enter an image url of the place"
@@ -71,26 +110,93 @@
             </div>
             <div class="form_input_margin">
               <label for="description" class="form_input_margin"
-                >Description</label
+                >Description:</label
               >
+
               <textarea
                 type="text"
-                class="form-control form_input_height"
+                class="form-control form_input_height input_align_color"
+                style="padding-top: 60px; resize: none"
                 id="description"
-                placeholder="Where is it located?"
-                rows="3"
+                name="description"
+                placeholder="Why I want to go there"
+                rows="4"
+                cols="50"
               ></textarea>
             </div>
             <div class="d-grid gap-2">
-              <button type="submit" class="btn btn-sm btn-primary">
+              <button
+                id="add_to_list_btn"
+                type="button"
+                class="btn btn-sm btn-primary"
+              >
                 Add to list
               </button>
             </div>
           </form>
         </div>
         <div class="col-md-5 col-sm-12 blue_border">
-          <div class="purple_border">Enter destination details</div>
-          <div class="yellow_border"></div>
+          <div id="desName" class="purple_border">Your Destinations Here</div>
+          <div class="yellow_border">
+            <section id="card1">
+              <div class="card">
+                <img
+                  src="..."
+                  id="card-img-1"
+                  style="height: 250px"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 id="card-title-1" class="card-title">Empty</h5>
+                  <p id="card-desc-1" class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a
+                    id="desLink"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary"
+                    >Destination Website</a
+                  >
+                </div>
+              </div>
+            </section>
+            <section id="card2">
+              <div class="row">
+                <div class="col s12 m7">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="images/sample-1.jpg" />
+                      <span id="card-title-2" class="card-title"
+                        >Card Title</span
+                      >
+                    </div>
+
+                    <div class="card-content">
+                      <p id="card-desc-2">
+                        I am a very simple card. I am good at containing small
+                        bits of information. I am convenient because I require
+                        little markup to use effectively.
+                      </p>
+                    </div>
+                    <div class="card-action">
+                      <a
+                        id="card2Link"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-primary"
+                        >Destination Website</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </div>
@@ -101,5 +207,9 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    <!--Materialize JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- My JS -->
+    <script src="./script.js"></script>
   </body>
 </html>
