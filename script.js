@@ -7,14 +7,23 @@
 $("#card1").hide();
 $("#card2").hide();
 
-$("document").ready(function(){
-    $('.parallax').parallax();
-  });
+// $("document").ready(function(){
+//     $('.parallax').parallax();
+//   });
+
+// $("document").ready(function(){
+// $('.carousel').carousel();
+// });
 
 function startUp() {
     console.log("start up is firing");
 
+    materialize();
     wireUpButtons();
+}
+
+function materialize() {
+    $('.parallax').parallax();
 }
 
 function wireUpButtons() {
@@ -43,15 +52,16 @@ function getTemplate() {
 
 function copyClone(userInput) {
     let newClone = getTemplate();
-    changeCloneContent(newClone, userInput);
+    // changeCloneContent(newClone, userInput);
+    changeCloneContent.call(userInput, newClone);
     addCloneToDom(newClone);
 }
 
-function changeCloneContent(template, info) {
-    template.find("a").attr("href", info.destinationName)
-    template.find("#card-title-2").html(info.location)
-    template.find("img").attr("src", info.pic)
-    template.find("#card-desc-2").html(info.descript)
+function changeCloneContent(template) {
+    template.find("a").attr("href", this.destinationName)
+    template.find("#card-title-2").html(this.location)
+    template.find("img").attr("src", this.pic)
+    template.find("#card-desc-2").html(this.descript)
 }
 
 function addCloneToDom(clone) {
